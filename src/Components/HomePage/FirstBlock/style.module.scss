@@ -1,0 +1,24 @@
+.firstBlockContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .brandNameContainer {
+    max-width: 490px;
+    width: 100%;
+    svg{
+      width: 100%;
+    }
+  }
+  .counterContainer{
+    //width: 100%;
+    width: 1170px;
+    height: 260px;
+    margin-top: 55px;
+    .counter{
+      width: 100%;
+      svg{
+        width: 100%;
+      }
+    }
+  }
+}

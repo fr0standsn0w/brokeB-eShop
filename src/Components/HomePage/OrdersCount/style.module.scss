@@ -1,0 +1,17 @@
+.orderCountContainer {
+  width: 100%;
+  max-width: 360px;
+  span {
+    font-weight: 600;
+    font-size: 20px;
+    &:first-child {
+      padding: 10px;
+      background-color: rgba(133, 133, 133, 0.5);
+      border: 1px solid #FFFFFF;
+      border-radius: 12px;
+    }
+  }
+  span + span {
+    margin-left: 10px;
+  }
+}
