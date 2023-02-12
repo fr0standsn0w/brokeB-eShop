@@ -1,0 +1,71 @@
+.headerContainer{
+  width: 100%;
+  max-width: 335px;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  @media screen and (max-width: 1700px){
+    justify-content: flex-start;
+  }
+  .headerBody{
+    width: 100%;
+    max-width: 225px;
+    background: #000000;
+    border: 1px solid #616060;
+    border-radius: 0 0 41px 41px;
+    padding: 40px 23px;
+    cursor: pointer;
+    .logoHeaderContainer{
+      max-height: 180px;
+      svg{
+        width: 100%;
+      }
+    }
+  }
+}
+.headerOpenedContainer{
+  width: 100%;
+  max-width: 600px;
+  background: linear-gradient(166.24deg, rgba(255, 255, 255, 0.488) 2.51%, rgba(50, 50, 49, 0.472) 97.32%);
+  backdrop-filter: blur(11.5px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 70px 55px 0 0;
+  @media screen and (max-width: 1700px){
+    justify-content: flex-start;
+  }
+  .headerOpenedBody{
+    width: 100%;
+    max-width: 440px;
+    .headerOpenedLogoContainer{
+      max-width: 180px;
+      svg{
+        width: 100%;
+      }
+    }
+    .headerOpenedTextBody{
+      margin-top: 100px;
+      p{
+        margin-top: 20px;
+      }
+    }
+  }
+}
+.overlay{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: black;
+}

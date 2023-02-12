@@ -1,3 +1,7 @@
+.App{
+    position: relative;
+    min-height: 100vh;
+}
 .container{
     background-image: url("/src/assets/images/mainBackground.jpg");
     background-size: cover;
@@ -5,6 +9,10 @@
 .mainContainer {
     width: 100%;
     max-width: 1700px;
+    margin: 0 auto;
+}
+.mainContainerCatalog {
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -17,8 +25,8 @@
     overflow: hidden;
     -webkit-user-select: none;
     z-index: 1;
+    pointer-events: none;
 }
-
 #overlay img {
     position: absolute;
     right: 0;

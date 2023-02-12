@@ -6,7 +6,7 @@ import OrdersCount from "./OrdersCount/OrdersCount";
 
 const HomePage = () => {
     return (
-        <div style={{height: '100vh'}} className={s.homePageContainer}>
+        <div className={s.homePageContainer}>
             <div>
                 <FirstBlock/>
                 <Buttons/>

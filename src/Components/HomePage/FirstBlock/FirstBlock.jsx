@@ -1,5 +1,7 @@
 import React from 'react';
 import s from './style.module.scss';
+import FlipClockCountdown from '@leenguyen/react-flip-clock-countdown';
+import '@leenguyen/react-flip-clock-countdown/dist/index.css';
 
 const FirstBlock = () => {
     return (
@@ -35,7 +37,14 @@ const FirstBlock = () => {
             </div>
             <div className={s.counterContainer}>
                 <div className={s.counter}>
-                    
+                    <FlipClockCountdown
+                        to={'2023-04-01T00:00:00'}
+                        labelStyle={{fontSize: 20, fontWeight: 400, textTransform: 'uppercase'}}
+                        digitBlockStyle={{ width: 135, height: 210, fontSize: 160 }}
+                        dividerStyle={{ color: 'black', height: 2 }}
+                    >
+                        Finished!
+                    </FlipClockCountdown>
                 </div>
             </div>
         </div>
