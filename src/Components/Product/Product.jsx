@@ -5,7 +5,7 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import "swiper/css/effect-coverflow";
 import 'swiper/css';
 import "./swiperStyles.css"
-import ProductDescription from "./ProductDescription/ProductDescription";
+import ProductCard from "./ProductDescription/ProductCard";
 
 const Product = () => {
     const [open, setOpen] = useState({
@@ -143,7 +143,7 @@ const Product = () => {
                 <div className={s.productImageContainer}>
                     <img src={placeholder} alt=""/>
                 </div>
-                <ProductDescription state={open}/>
+                <ProductCard state={open}/>
             </div>
         </div>
     );

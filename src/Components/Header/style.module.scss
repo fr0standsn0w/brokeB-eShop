@@ -16,12 +16,35 @@
     background: #000000;
     border: 1px solid #616060;
     border-radius: 0 0 41px 41px;
-    padding: 40px 23px;
     cursor: pointer;
     .logoHeaderContainer{
       max-height: 180px;
+      border: 1px solid #616060;
+      border-radius: 0 0 41px 41px;
+      padding: 40px 15px;
       svg{
         width: 100%;
+      }
+    }
+    .headerLinksContainer{
+      padding: 20px 15px 40px 15px;
+      z-index: 2;
+      a{
+        text-decoration-line: underline;
+        color: #FFFFFF;
+        opacity: 0.5;
+        text-transform: uppercase;
+        transition: 0.3s;
+        display: block;
+        position: relative;
+        font-size: 20px;
+        z-index: 3;
+        &:hover{
+          opacity: 1;
+        }
+      }
+      a+a{
+        margin-top: 5px;
       }
     }
   }

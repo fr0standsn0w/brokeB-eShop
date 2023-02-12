@@ -132,6 +132,9 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    .deliveryMethod{
+      font-weight: 600;
+    }
   }
   .productVideoContainer {
     max-width: 610px;

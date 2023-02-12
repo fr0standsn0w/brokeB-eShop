@@ -1,14 +1,17 @@
 import React, {useState} from 'react';
 import s from './style.module.scss';
 import g from '../../assets/css/global.module.scss'
+import {Link} from "react-router-dom";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false)
+    const [hover, setHover] = useState(false)
     return (
         <>
-            {isOpen ? <HeaderOpened setIsOpen={setIsOpen}/> : <header className={s.headerContainer}>
-                <div className={s.headerBody} onClick={() => setIsOpen(true)}>
-                    <div className={s.logoHeaderContainer}>
+            {isOpen ? <HeaderOpened setIsOpen={setIsOpen}/> :
+                <header className={s.headerContainer}  >
+                <div className={s.headerBody} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+                    <div className={s.logoHeaderContainer} onClick={() => setIsOpen(true)}>
                         <svg width="179" height="44" viewBox="0 0 179 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fillRule="evenodd" clipRule="evenodd"
                                   d="M171.046 37.6817H167.268V23.8662C173.618 23.8662 172.493 22.642 172.493 36.1952C172.493 37.332 172.171 37.6817 171.046 37.6817ZM169.197 18.1826H167.268V5.85352H171.528C172.332 9.70089 172.01 11.5371 172.01 16.084C172.01 17.6579 170.644 18.1826 169.197 18.1826V18.1826ZM161.159 41.7914C161.159 44.5021 165.821 43.3653 172.493 43.3653C179.887 43.3653 178.601 34.5339 178.601 27.4512C178.601 23.8662 176.994 21.9425 174.341 21.243L176.351 19.8439C178.601 17.8328 177.717 13.9854 177.717 6.9028C177.717 -1.66634 169.036 0.1699 161.159 0.1699V41.7914V41.7914Z"
@@ -37,6 +40,11 @@ const Header = () => {
                             <path fillRule="evenodd" clipRule="evenodd" d="M130.454 43.3659H136.563V35.6711H130.454V43.3659Z" fill="white"/>
                         </svg>
                     </div>
+                    {hover ? <div className={s.headerLinksContainer} >
+                        <Link to={"/"}>Главная</Link>
+                        <Link to={"/catalog"}>Каталог</Link>
+                        <Link to={"/profile"}>Личный кабинет</Link>
+                    </div> : null}
                 </div>
             </header>}
         </>
@@ -45,7 +53,7 @@ const Header = () => {
 export const HeaderOpened = ({setIsOpen}) => {
     return (
         <>
-            <div className={s.overlay} onClick={()=>setIsOpen(false)}></div>
+            <div className={s.overlay} onClick={() => setIsOpen(false)}></div>
             <div className={s.headerOpenedContainer} onClick={() => setIsOpen(false)}>
                 <div className={s.headerOpenedBody}>
                     <div className={s.headerOpenedLogoContainer}>

@@ -1,0 +1,66 @@
+.registerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  .registerBody{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 25px;
+    input{
+      width: 100%;
+      max-width: 870px;
+      border-radius: 24px;
+      background: #151515;
+      padding: 20px 0 20px 25px;
+      color: white;
+      font-weight: 600;
+      font-size: 20px;
+    }
+    input + input {
+      margin-top: 20px;
+    }
+    .registerPoliticsContainer{
+      margin-top: 25px;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      .checkBoxContainer{
+        display: flex;
+        align-items: center;
+        input{
+          border: none;
+          background: #151515;
+          border-radius: 4px;
+          width: 33px;
+          height: 33px;
+          color: #151515;
+          accent-color: #151515;
+          filter: invert(100%) hue-rotate(18deg) brightness(1.7);
+        }
+        span{
+          margin-left: 18px;
+          width: 100%;
+          max-width: 266px;
+        }
+      }
+      button{
+        border: 1px solid #FFFFFF;
+        border-radius: 15px;
+        background-color: transparent;
+        color: white;
+        width: 100%;
+        max-width: 390px;
+        padding: 13px 0;
+        transition: 0.3s;
+        &:hover{
+          background-color: white;
+          color: black;
+        }
+      }
+    }
+  }
+}

@@ -4,6 +4,7 @@ import {createBrowserRouter, createRoutesFromElements, Outlet, Route, RouterProv
 import MainPage from "./Components/MainPage";
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
+import ProfilePage from "./Components/Profile/ProfilePage";
 
 const Layout = () => (
     <>
@@ -20,6 +21,7 @@ const App = () => {
                 <Route element={<MainPage/>} path={'/'}/>
                 <Route element={<MainPage/>} path={'/catalog'}/>
                 <Route element={<MainPage/>} path={'/product'}/>
+                <Route element={<ProfilePage/>} path={'/profile'}/>
             </Route>
         )
     )
