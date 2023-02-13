@@ -75,7 +75,7 @@ const Product = () => {
                         slidesPerView={3}
                         direction={"horizontal"}
                         slideToClickedSlide={true}
-                        allowTouchMove={false}
+                        // allowTouchMove={false}
                         centeredSlides={true}
                         loop={true}
                         onTransitionEnd={(index)=>changeOpenHandler(index.realIndex)}

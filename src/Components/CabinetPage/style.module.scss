@@ -24,13 +24,17 @@
       position: relative;
       display: block;
       thead{
+        display: inline-block;
         tr{
           th{
             font-size: 34px;
             color: white;
             font-weight: 700;
-            max-width: 295px;
-            min-width: 295px;
+            max-width: calc(80px + (295 - 80)*((100vw - 375px) / (1920 - 375)));
+            min-width: calc(80px + (295 - 80)*((100vw - 375px) / (1920 - 375)));
+            @media screen and (max-width: 768px){
+              font-size: 16px;
+            }
           }
         }
       }
@@ -38,18 +42,20 @@
         display: inline-block;
         position: relative;
         overflow-y: auto;
-        max-height: 480px;
-        min-height: 245px;
+        height: 390px;
         tr{
           background: #151515;
           border-radius: 24px;
           td{
-            max-width: 295px;
-            min-width: 295px;
+            max-width: calc(80px + (295 - 80)*((100vw - 375px) / (1920 - 375)));
+            min-width: calc(80px + (295 - 80)*((100vw - 375px) / (1920 - 375)));
             font-weight: 600;
             font-size: 20px;
             color: #616060;
             padding: 20px 0;
+            @media screen and (max-width: 768px){
+              font-size: 16px;
+            }
           }
           .status{
             text-transform: uppercase;
