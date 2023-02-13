@@ -26,3 +26,11 @@
 .productMenu .swiper-slide-prev{
     scale: 0.7;
 }
+@media screen and (max-width: 768px){
+    .productMenu .swiper-slide-next div:last-child{
+        display: none;
+    }
+    .productMenu .swiper-slide-prev div:last-child{
+        display: none;
+    }
+}

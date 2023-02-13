@@ -1,15 +1,29 @@
 .App{
     position: relative;
     min-height: 100vh;
+    height: 100%;
 }
 .container{
     background-image: url("/src/assets/images/mainBackground.jpg");
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+.containerAuth{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-color: black;
 }
 .mainContainer {
     width: 100%;
     max-width: 1700px;
     margin: 0 auto;
+    height: 100%;
+    display: flex;
 }
 .mainContainerCatalog {
     width: 100%;

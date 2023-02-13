@@ -8,12 +8,12 @@ import CatalogItem from "./CatalogItem/CatalogItem";
 
 const Catalog = () => {
     return (
-        <div className={s.catalogContainer} style={{height: "100vh"}}>
+        <div className={s.catalogContainer}>
             <Swiper
                 slideToClickedSlide={true}
                 effect={"coverflow"}
                 grabCursor={true}
-                slidesPerView={5}
+                slidesPerView={1}
                 // spaceBetween={35}
                 centeredSlides={true}
                 mousewheel={{
@@ -33,6 +33,17 @@ const Catalog = () => {
                 }}
                 // loop={true}
                 modules={[EffectCoverflow, Mousewheel, FreeMode]}
+                breakpoints={{
+                    1100: {
+                        slidesPerView: 5
+                    },
+                    768: {
+                        slidesPerView: 3
+                    },
+                    325: {
+                        slidesPerView: 1
+                    }
+                }}
             >
                 <SwiperSlide>
                     <CatalogItem/>

@@ -1,10 +1,9 @@
 .productContainer{
   width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 150px 0 90px 0;
+  margin: 30px 0;
   .productBody{
     width: 100%;
     padding: 20px 50px 0 50px;
@@ -17,12 +16,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media screen and (max-width: 768px){
+      flex-direction: column;
+    }
     .navigation{
       height: 100%;
       //max-height: 450px;
       display: flex;
       align-items: center;
       justify-content: center;
+      width: auto;
+      max-width: 100%;
+      @media screen and (max-width: 768px){
+        width: 100%;
+        max-width: calc(200px + (1920 - 200)*((100vw - 375px) / (1920 - 375)));
+      }
       .mySwiper{
         height: 100%;
         max-height: 400px;
@@ -33,7 +41,19 @@
       //margin-left: 120px;
       img{
         object-fit: contain;
+        max-width: 100%;
+        max-height: 100%;
         height: 100%;
+      }
+    }
+    .closeButton{
+      cursor: pointer;
+      position: absolute;
+      top: 50px;
+      left: 75px;
+      @media screen and (max-width: 768px){
+        top: -40px;
+        left: 50%;
       }
     }
   }
@@ -45,11 +65,15 @@
   align-items: center;
   position: relative;
   svg{
+    position: relative;
     cursor: pointer;
     display: block;
     width: 100%;
     max-width: 40px;
     object-fit: contain;
+    @media screen and (max-width: 768px){
+      max-width: 22px;
+    }
   }
 }
 .line{

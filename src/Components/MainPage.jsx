@@ -4,6 +4,8 @@ import HomePage from "./HomePage/HomePage";
 import {useLocation} from "react-router-dom";
 import Catalog from "./Catalog/Catalog";
 import Product from "./Product/Product";
+import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
 
 const MainPage = () => {
     let pageURL = useLocation()
@@ -22,6 +24,7 @@ const MainPage = () => {
     return (
         <div className={"App"}>
             <div className="container">
+                <Header/>
                 <div className={pageURL.pathname === "/catalog" ? "mainContainerCatalog" : "mainContainer"}>
                     <div id="overlay">
                         <img id={"cloud-1"} src={clouds} width="1200" height="670" alt="animated clouds"/>
@@ -29,6 +32,7 @@ const MainPage = () => {
                     </div>
                     {renderElement()}
                 </div>
+                <Footer/>
             </div>
         </div>
     );

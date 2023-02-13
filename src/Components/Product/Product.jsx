@@ -6,8 +6,11 @@ import "swiper/css/effect-coverflow";
 import 'swiper/css';
 import "./swiperStyles.css"
 import ProductCard from "./ProductDescription/ProductCard";
+import {useNavigate} from "react-router-dom";
+import {useMediaQuery} from "../../hooks/useMediaQuery";
 
 const Product = () => {
+    const mediaQuery = useMediaQuery('(max-width: 768px)')
     const [open, setOpen] = useState({
         description: true,
         video: false,
@@ -61,20 +64,27 @@ const Product = () => {
                 return null
         }
     }
+    const navigate = useNavigate();
     return (
         <div className={s.productContainer}>
             <div className={s.productBody}>
+                <div className={s.closeButton} onClick={() => navigate(-1)}>&#9587;</div>
                 <nav className={s.navigation}>
                     <Swiper
                         autoHeight={false}
                         slidesPerView={3}
-                        direction={"vertical"}
+                        direction={"horizontal"}
                         slideToClickedSlide={true}
                         allowTouchMove={false}
                         centeredSlides={true}
                         loop={true}
                         onTransitionEnd={(index)=>changeOpenHandler(index.realIndex)}
                         className={`${s.mySwiper} productMenu`}
+                        breakpoints={{
+                            768: {
+                                direction: "vertical"
+                            }
+                        }}
                     >
                         <SwiperSlide>
                             <div className={s.navIconContainer} >
@@ -141,7 +151,7 @@ const Product = () => {
                     </Swiper>
                 </nav>
                 <div className={s.productImageContainer}>
-                    <img src={placeholder} alt=""/>
+                    {!mediaQuery && <img src={placeholder} alt=""/>}
                 </div>
                 <ProductCard state={open}/>
             </div>

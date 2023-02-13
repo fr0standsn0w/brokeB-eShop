@@ -4,13 +4,12 @@ import {createBrowserRouter, createRoutesFromElements, Outlet, Route, RouterProv
 import MainPage from "./Components/MainPage";
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
-import ProfilePage from "./Components/Profile/ProfilePage";
+import EnterFormPage from "./Components/Profile/EnterFormPage";
+import CabinetPage from "./Components/CabinetPage/CabinetPage";
 
 const Layout = () => (
     <>
-        <Header/>
         <Outlet/>
-        <Footer/>
     </>
 )
 
@@ -21,7 +20,10 @@ const App = () => {
                 <Route element={<MainPage/>} path={'/'}/>
                 <Route element={<MainPage/>} path={'/catalog'}/>
                 <Route element={<MainPage/>} path={'/product'}/>
-                <Route element={<ProfilePage/>} path={'/profile'}/>
+                <Route element={<EnterFormPage/>} path={'/login'}/>
+                <Route element={<EnterFormPage/>} path={'/registration'}/>
+                <Route element={<EnterFormPage/>} path={'/forgot'}/>
+                <Route element={<CabinetPage/>} path={'/profile'}/>
             </Route>
         )
     )

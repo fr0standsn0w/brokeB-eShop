@@ -3,13 +3,14 @@
   max-width: 335px;
   display: flex;
   justify-content: flex-end;
-  position: fixed;
+  //position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 3;
   @media screen and (max-width: 1700px){
     justify-content: flex-start;
   }
+
   .headerBody{
     width: 100%;
     max-width: 225px;
@@ -17,18 +18,46 @@
     border: 1px solid #616060;
     border-radius: 0 0 41px 41px;
     cursor: pointer;
+    position: relative;
+    @media screen and (max-width: 768px){
+      max-width: 85px;
+      border-radius: 0 0 17px 17px;
+    }
     .logoHeaderContainer{
       max-height: 180px;
       border: 1px solid #616060;
       border-radius: 0 0 41px 41px;
       padding: 40px 15px;
+      @media screen and (max-width: 768px){
+        max-height: 67px;
+        padding: 0px 8px 20px 8px;
+        border-radius: 0 0 17px 17px;
+      }
       svg{
+        display: block;
         width: 100%;
       }
     }
     .headerLinksContainer{
+      position: absolute;
+      background-color: black;
+      bottom: -95px;
+      left: 0;
       padding: 20px 15px 40px 15px;
       z-index: 2;
+      border-width: 0 1px 1px 1px;
+      border-style: solid;
+      border-color: #616060;
+      border-radius: 0 0 41px 41px;
+      height: auto;
+      @media screen and (max-width: 768px){
+        height: 100%;
+        bottom: 0;
+        top: 50px;
+        background-color: black;
+        padding: 0 8px;
+        border-radius: 0 0 17px 17px;
+      }
       a{
         text-decoration-line: underline;
         color: #FFFFFF;
@@ -39,6 +68,9 @@
         position: relative;
         font-size: 20px;
         z-index: 3;
+        @media screen and (max-width: 768px){
+          font-size: 10px;
+        }
         &:hover{
           opacity: 1;
         }
@@ -61,7 +93,7 @@
   height: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: 70px 55px 0 0;
+  padding: 70px 55px 0 15px;
   @media screen and (max-width: 1700px){
     justify-content: flex-start;
   }

@@ -1,9 +1,20 @@
 .orderCountContainer {
   width: 100%;
   max-width: 360px;
+  margin-top: 50px;
+  @media screen and (max-width: 768px){
+    margin-top: 40px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
   span {
     font-weight: 600;
     font-size: 20px;
+    @media screen and (max-width: 768px){
+      font-size: 16px;
+    }
     &:first-child {
       padding: 10px;
       background-color: rgba(133, 133, 133, 0.5);

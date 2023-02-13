@@ -1,13 +1,30 @@
 import React from 'react';
 import s from './style.module.scss';
+import './times.css'
 import FlipClockCountdown from '@leenguyen/react-flip-clock-countdown';
 import '@leenguyen/react-flip-clock-countdown/dist/index.css';
+import {useMediaQuery} from "../../../hooks/useMediaQuery";
 
 const FirstBlock = () => {
+    const isActive_1150 = useMediaQuery('(max-width: 1150px)');
+    const isActive_837 = useMediaQuery('(max-width: 837px)');
+    const isActive_515 = useMediaQuery('(max-width: 837px)');
+
+    const adaptiveClock = () => {
+        if (isActive_515) {
+            return ({width: 40, height: 60, fontSize: 55})
+        } else if (isActive_837 === true) {
+            return ({width: 55, height: 130, fontSize: 80})
+        } else if (isActive_1150 === true) {
+            return ({width: 95, height: 170, fontSize: 120})
+        } else {
+            return ({width: 135, height: 210, fontSize: 160})
+        }
+    }
     return (
         <div className={s.firstBlockContainer}>
             <div className={s.brandNameContainer}>
-                <svg width="491" height="120" viewBox="0 0 491 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="491" viewBox="0 0 491 120" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" clipRule="evenodd"
                           d="M470.003 103.543H459.623V65.5807C477.071 65.5807 473.979 62.2169 473.979 99.4588C473.979 102.582 473.096 103.543 470.003 103.543ZM464.924 49.9632H459.623V16.0851H471.329C473.537 26.657 472.654 31.7027 472.654 44.1967C472.654 48.5216 468.899 49.9632 464.924 49.9632ZM442.837 114.836C442.837 122.284 455.647 119.161 473.979 119.161C494.299 119.161 490.765 94.8936 490.765 75.4318C490.765 65.5807 486.348 60.2948 479.059 58.3726L484.581 54.5283C490.765 49.0021 488.335 38.4302 488.335 18.9683C488.335 -4.57812 464.482 0.467536 442.837 0.467536V114.836Z"
                           fill="white"/>
@@ -40,8 +57,9 @@ const FirstBlock = () => {
                     <FlipClockCountdown
                         to={'2023-04-01T00:00:00'}
                         labelStyle={{fontSize: 20, fontWeight: 400, textTransform: 'uppercase'}}
-                        digitBlockStyle={{ width: 135, height: 210, fontSize: 160 }}
-                        dividerStyle={{ color: 'black', height: 2 }}
+                        digitBlockStyle={adaptiveClock()}
+                        dividerStyle={{color: 'black', height: 2}}
+                        showSeparators={false}
                     >
                         Finished!
                     </FlipClockCountdown>

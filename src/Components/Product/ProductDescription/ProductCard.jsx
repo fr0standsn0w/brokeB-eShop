@@ -2,8 +2,11 @@ import React, {useState} from 'react';
 import s from './styles.module.scss';
 import DeliveryMethodSelector from "./Selectors/DeliveryMethodSelector";
 import PayMethodSelector from "./Selectors/PayMethodSelector";
+import {useMediaQuery} from "../../../hooks/useMediaQuery";
 
 const ProductCard = ({state}) => {
+    const mediaQuery = useMediaQuery('(max-width: 768px)')
+
     const colors = [
         {id: 1, color: '#0F0F0F'},
         {id: 2, color: '#323231'},

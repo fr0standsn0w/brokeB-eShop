@@ -1,6 +1,6 @@
 .h1{
   font-weight: 700;
-  font-size: 48px;
+  font-size: calc(24px + (48 - 24)*((100vw - 375px) / (1920 - 375)));
 }
 .h2 {
   font-weight: 700;

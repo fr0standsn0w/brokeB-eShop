@@ -3,7 +3,15 @@
   max-width: 860px;
   display: flex;
   justify-content: space-between;
-  margin: 80px auto 0 auto;
+  margin: 30px 0 0 0;
+  @media screen and (max-width: 768px){
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    padding: 0 10px;
+    margin-top: 60px;
+  }
   a{
     width: 100%;
     max-width: 390px;

@@ -9,9 +9,12 @@
   padding-bottom: 30px;
 
   .productNamePriceContainer {
-    font-size: 48px;
+    font-size: calc(22px + (48 - 22)*((100vw - 320px) / (1920 - 320)));
     font-weight: 700;
-
+    margin-top: 0;
+    @media screen and (max-width: 768px){
+      margin-top: 20px;
+    }
     .name {
     }
 
@@ -35,6 +38,7 @@
       align-items: center;
       flex-wrap: wrap;
       width: 100%;
+      row-gap: 15px;
       .colorElement {
         height: 17px;
         width: 100%;
@@ -42,17 +46,26 @@
         padding-top: 10px;
         position: relative;
         border-top: 1px solid transparent;
+        @media screen and (max-width: 768px){
+          max-width: 110px;
+        }
         .colorPicker {
           height: 17px;
           position: relative;
           width: 100%;
           max-width: 120px;
           border-radius: 8px;
+          @media screen and (max-width: 768px){
+            max-width: 110px;
+          }
         }
         .colorPickerActive {
           position: relative;
           width: 100%;
           max-width: 120px;
+          @media screen and (max-width: 768px){
+            max-width: 110px;
+          }
           height: 17px;
           border-radius: 8px;
         }
@@ -64,17 +77,26 @@
         border-top: 1px solid white;
         padding-top: 10px;
         position: relative;
+        @media screen and (max-width: 768px){
+          max-width: 110px;
+        }
         .colorPicker {
           height: 17px;
           position: relative;
           width: 100%;
           max-width: 120px;
           border-radius: 8px;
+          @media screen and (max-width: 768px){
+            max-width: 110px;
+          }
         }
         .colorPickerActive {
           position: relative;
           width: 100%;
           max-width: 120px;
+          @media screen and (max-width: 768px){
+            max-width: 110px;
+          }
           height: 17px;
           border-radius: 8px;
         }
@@ -83,16 +105,20 @@
 
     .descriptionFullText {
       font-weight: 400;
-      font-size: 20px;
       margin-top: 10px;
     }
   }
   .productSizeContainer{
     width: 100%;
+    @media screen and (max-width: 768px){
+      margin-top: 20px;
+    }
     .sizes {
       display: flex;
       column-gap: 25px;
       margin-top: 15px;
+      row-gap: 10px;
+      flex-wrap: wrap;
       .productSize {
         display: flex;
         transition: 0.2s all ease-in-out;
@@ -107,6 +133,12 @@
         padding: 20px 30px;
         opacity: 0.6;
         cursor: pointer;
+        @media screen and (max-width: 768px){
+          width: 50px;
+          height: 50px;
+          font-size: 20px;
+          padding: 14px 19px;
+        }
         &:hover {
           opacity: 1;
         }
@@ -132,6 +164,9 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    @media screen and (max-width: 768px){
+      margin-top: 20px;
+    }
     .deliveryMethod{
       font-weight: 600;
     }
@@ -140,7 +175,9 @@
     max-width: 610px;
     max-height: 300px;
     height: 100%;
-
+    @media screen and (max-width: 768px){
+      margin-top: 50px;
+    }
     iframe {
       height: 100%;
       width: 100%;
@@ -150,9 +187,11 @@
   }
 
   .navigateButtonContainer {
-    //margin-top: 50px;
+    margin-top: 0;
     width: 100%;
-
+    @media screen and (max-width: 768px){
+      margin-top: 50px;
+    }
     button {
       font-weight: 600;
       width: 100%;

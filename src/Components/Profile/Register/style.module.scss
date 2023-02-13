@@ -18,9 +18,17 @@
       color: white;
       font-weight: 600;
       font-size: 20px;
+      @media screen and (max-width: 768px){
+        font-size: 16px;
+        padding: 12px 0 12px 25px;
+        border-radius: 15px;
+      }
     }
     input + input {
       margin-top: 20px;
+      @media screen and (max-width: 768px){
+        margin-top: 7px;
+      }
     }
     .registerPoliticsContainer{
       margin-top: 25px;
@@ -28,6 +36,9 @@
       width: 100%;
       justify-content: space-between;
       align-items: center;
+      @media screen and (max-width: 768px){
+        flex-wrap: wrap;
+      }
       .checkBoxContainer{
         display: flex;
         align-items: center;
@@ -56,10 +67,26 @@
         max-width: 390px;
         padding: 13px 0;
         transition: 0.3s;
+        @media screen and (max-width: 768px){
+          margin: 40px auto 0 auto;
+          border-radius: 10px;
+        }
         &:hover{
           background-color: white;
           color: black;
         }
+      }
+    }
+    .haveAccount{
+      text-align: center;
+      width: 100%;
+      font-weight: 400;
+      font-size: 20px;
+      text-decoration-line: underline;
+      color: #FFFFFF;
+      margin-top: 50px;
+      @media screen and (max-width: 768px){
+        font-size: 16px;
       }
     }
   }

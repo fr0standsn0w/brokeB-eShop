@@ -8,8 +8,8 @@ const Header = () => {
     const [hover, setHover] = useState(false)
     return (
         <>
-            {isOpen ? <HeaderOpened setIsOpen={setIsOpen}/> :
-                <header className={s.headerContainer}  >
+            {isOpen && <HeaderOpened setIsOpen={setIsOpen}/>}
+            <header className={s.headerContainer}>
                 <div className={s.headerBody} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
                     <div className={s.logoHeaderContainer} onClick={() => setIsOpen(true)}>
                         <svg width="179" height="44" viewBox="0 0 179 44" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,13 +40,15 @@ const Header = () => {
                             <path fillRule="evenodd" clipRule="evenodd" d="M130.454 43.3659H136.563V35.6711H130.454V43.3659Z" fill="white"/>
                         </svg>
                     </div>
-                    {hover ? <div className={s.headerLinksContainer} >
-                        <Link to={"/"}>Главная</Link>
-                        <Link to={"/catalog"}>Каталог</Link>
-                        <Link to={"/profile"}>Личный кабинет</Link>
-                    </div> : null}
+                    {hover ?
+                        <div className={s.headerLinksContainer}>
+                            <Link to={"/"}>Главная</Link>
+                            <Link to={"/catalog"}>Каталог</Link>
+                            <Link to={"/login"}>Личный кабинет</Link>
+                        </div>
+                        : null}
                 </div>
-            </header>}
+            </header>
         </>
     );
 };
