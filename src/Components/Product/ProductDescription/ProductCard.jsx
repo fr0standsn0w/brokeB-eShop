@@ -62,7 +62,6 @@ const ProductCard = ({state}) => {
             return (
                 <>
                     <div className={s.productDescriptionContainer}>
-
                         <div className={s.productNamePriceContainer}>
                             <p className={s.name}>Худи HUGO Regular Fit</p>
                             <p className={s.price}>14 000 руб</p>

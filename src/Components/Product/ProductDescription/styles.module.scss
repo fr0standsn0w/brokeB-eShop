@@ -110,6 +110,7 @@
   }
   .productSizeContainer{
     width: 100%;
+    margin-top: 20px;
     @media screen and (max-width: 768px){
       margin-top: 20px;
     }
@@ -160,6 +161,7 @@
     }
   }
   .deliveryMethodContainer{
+    margin-top: 10px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -189,6 +191,7 @@
   .navigateButtonContainer {
     margin-top: 0;
     width: 100%;
+    margin-top: 20px;
     @media screen and (max-width: 768px){
       margin-top: 50px;
     }
