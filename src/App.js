@@ -2,8 +2,6 @@ import React from 'react';
 import './App.css';
 import {createBrowserRouter, createRoutesFromElements, Outlet, Route, RouterProvider} from "react-router-dom";
 import MainPage from "./Components/MainPage";
-import Footer from "./Components/Footer/Footer";
-import Header from "./Components/Header/Header";
 import EnterFormPage from "./Components/Profile/EnterFormPage";
 import CabinetPage from "./Components/CabinetPage/CabinetPage";
 

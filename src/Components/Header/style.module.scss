@@ -13,10 +13,10 @@
 
   .headerBody{
     width: 100%;
-    max-width: 225px;
+    max-width: 115px;
     background: #000000;
     border: 1px solid #616060;
-    border-radius: 0 0 41px 41px;
+    border-radius: 0 0 15px 15px;
     cursor: pointer;
     position: relative;
     @media screen and (max-width: 768px){
@@ -26,11 +26,11 @@
     .logoHeaderContainer{
       max-height: 180px;
       border: 1px solid #616060;
-      border-radius: 0 0 41px 41px;
-      padding: 40px 15px;
+      border-radius: 0 0 15px 15px;
+      padding: 15px 15px;
       @media screen and (max-width: 768px){
         max-height: 67px;
-        padding: 0px 8px 20px 8px;
+        padding: 0px 8px 15px 8px;
         border-radius: 0 0 17px 17px;
       }
       svg{
@@ -41,15 +41,16 @@
     .headerLinksContainer{
       position: absolute;
       background-color: black;
-      top: 90px;
+      top: 60px;
       left: 0;
-      padding: 20px 15px 40px 15px;
+      padding: 15px 8px 15px 8px;
       z-index: 2;
       border-width: 0 1px 1px 1px;
       border-style: solid;
       border-color: #616060;
-      border-radius: 0 0 41px 41px;
+      border-radius: 0 0 21px 21px;
       height: auto;
+      font-size: 14px;
       @media screen and (max-width: 768px){
         height: 100%;
         bottom: 0;
@@ -66,7 +67,7 @@
         transition: 0.3s;
         display: block;
         position: relative;
-        font-size: 20px;
+        font-size: 14px;
         z-index: 3;
         @media screen and (max-width: 768px){
           font-size: 10px;
@@ -76,7 +77,7 @@
         }
       }
       a+a{
-        margin-top: 5px;
+        margin-top: 8px;
       }
     }
   }

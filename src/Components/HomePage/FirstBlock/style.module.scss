@@ -30,3 +30,37 @@
     }
   }
 }
+.headerOpenedContainer{
+  width: 100%;
+  max-width: 600px;
+  background: linear-gradient(166.24deg, rgba(255, 255, 255, 0.488) 2.51%, rgba(50, 50, 49, 0.472) 97.32%);
+  backdrop-filter: blur(11.5px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 70px 55px 0 15px;
+  overflow: hidden;
+  @media screen and (max-width: 1700px){
+    justify-content: flex-start;
+  }
+  .headerOpenedBody{
+    width: 100%;
+    max-width: 440px;
+    .headerOpenedLogoContainer{
+      max-width: 180px;
+      svg{
+        width: 100%;
+      }
+    }
+    .headerOpenedTextBody{
+      margin-top: 100px;
+      p{
+        margin-top: 20px;
+      }
+    }
+  }
+}

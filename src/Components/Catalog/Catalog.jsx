@@ -25,8 +25,8 @@ const Catalog = () => {
                     momentumBounce: false
                 }}
                 coverflowEffect={{
-                    rotate: 0,
-                    stretch: 0,
+                    rotate: 15,
+                    stretch: 15,
                     depth: 150,
                     modifier: 1,
                     slideShadows: false,
